@@ -1,0 +1,400 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+  }
+  
+  
+  /* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 32rem;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+  }
+  
+  
+  /* MARKETING CONTENT
+  -------------------------------------------------- */
+  
+  /* Center align the text within the three columns below the carousel */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .marketing h2 {
+    font-weight: 400;
+  }
+  /* rtl:begin:ignore */
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  /* rtl:end:ignore */
+  
+  
+  /* Featurettes
+  ------------------------- */
+  
+  .featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+  
+  /* Thin out the marketing headings */
+  .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    /* rtl:remove */
+    letter-spacing: -.05rem;
+  }
+  
+  
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+  
+  @media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 240px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 200px;
+    height: 240px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color:#000000 ;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+  .contactus {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  .contactus .contactfrm img {
+    width: 100%;
+    margin-top: -47px;
+    margin-bottom: -15px;
+  }
+  .contactus .form-group {
+    width: 100%;
+  }
+  .contactus .form-group label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .contactus .button {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 5px 5px;
+  }
+  .contactus .button:hover {
+    background-color: purple;
+    color: white;
+  }
+
+
+  .videos {
+    background-color: #ffffff;
+    height: 100vh;
+    position: relative;
+  }
+  .videos h1 {
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 5rem;
+    color: white;
+  }
+  .videos .vdo {
+    margin: 4rem auto;
+    height: 65vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .videos .vdo .video {
+    height: 100%;
+    position: relative;
+  }
+  .videos .vdo input {
+    display: none;
+  }
+  
+  .videos .vdo .video img {
+    width: 50vw;
+    height: 90%;
+  }
+  .videos .vdo .video i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #61122f;
+  }
+  .videos .vdo .video i:hover {
+    cursor: pointer;
+  }
+  .videos .rbtn1 {
+    position: absolute;
+    bottom: 3%;
+    left: 30%;
+    display: flex;
+  }
+  .videos .rbtn1 label {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.6rem solid #020202;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 0.8rem;
+  }
+  #video1:checked ~ .video1 {
+    margin-left: 101vw;
+    transform: scale(1.1);
+    padding: 0 5rem;
+  }
+  #video2:checked ~ .video2 {
+    margin-left: 70vw;
+    transform: scale(1.1);
+    padding: 0 5rem;
+  }
+  #video3:checked ~ .video3 {
+    margin-left: 0%;
+    transform: scale(1.1);
+    padding: 0 5rem;
+  }
+  #video4:checked ~ .video4 {
+    margin-right: 70vw;
+    transform: scale(1.1);
+    padding: 0 5rem;
+  }
+  #video5:checked ~ .video5 {
+    margin-right: 180vw;
+    transform: scale(1.1);
+    padding: 0 5rem;
+  }
+  .videos .rbtn1 label:hover {
+    transform: scale(1.4);
+    border: 0.6rem solid white;
+  }
+
+
+  @media (max-width: 425px) {
+    .welcome h1 {
+      font-size: 30px;
+    }
+    .welcome .card img {
+      display: none;
+    }
+  
+    .video-slide h1 {
+      font-size: 30px;
+    }
+  
+    .team h1 {
+      font-size: 30px;
+    }
+    .videos {
+      background-color: #d89216;
+      height: 120vh;
+      position: relative;
+    }
+    .gallery h1 {
+      font-size: 30px;
+    }
+    .gallery .exp-img {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .gallery .carousel {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .gallery .carousel-cell .sm-img {
+      width: 100%;
+      height: 100px;
+    }
+    .gallery .exp-img img {
+      width: 100%;
+      height: 400px;
+    }
+  
+    .contactus .contactfrm {
+      margin-right: 12px;
+    }
+    .contactus .contactfrm img {
+      width: 375px;
+    }
+  }
+
+  #team small {
+    color: darkgray;
+  }
+  .gallery {
+    margin-top: 60px;
+    padding-bottom: 80px;
+    background-color: #f2f2f2;
+  }
+  .gallery h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .gallery .exp-img {
+    margin-bottom: 20px;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .gallery .exp-img img {
+    width: 100%;
+    height: 500px;
+  }
+  .gallery .carousel {
+    background: #fafafa;
+    float: center;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  .gallery .carousel-cell {
+    width: 28%;
+    height: 150px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  .gallery .carousel-cell .sm-img {
+    width: 100%;
+    height: 150px;
+  }
+
+
+  @media (max-width: 425px) {
+    .welcome h1 {
+      font-size: 30px;
+    }
+    .welcome .card img {
+      display: none;
+    }
+  
+    .video-slide h1 {
+      font-size: 30px;
+    }
+  
+    .team h1 {
+      font-size: 30px;
+    }
+    .videos {
+      background-color: #d89216;
+      height: 120vh;
+      position: relative;
+    }
+    .gallery h1 {
+      font-size: 30px;
+    }
+    .gallery .exp-img {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .gallery .carousel {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .gallery .carousel-cell .sm-img {
+      width: 100%;
+      height: 100px;
+    }
+    .gallery .exp-img img {
+      width: 100%;
+      height: 400px;
+    }
+  
+    .contactus .contactfrm {
+      margin-right: 12px;
+    }
+    .contactus .contactfrm img {
+      width: 375px;
+    }
+  }
+ 
+
+  
